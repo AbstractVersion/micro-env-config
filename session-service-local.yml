@@ -1,5 +1,19 @@
+
 server:
   port: 8080
+  use-forward-headers: true
+spring:
+  banner: 
+    charset: utf-8
+  info:
+    build:
+      encoding: utf-8
+    git:
+      encoding: utf-8
+  messages: 
+    encoding: utf-8
+  datasource:
+    url: jdbc:mysql://192.168.56.101:3306/sessionDB?useUnicode=true&characterEncoding=utf-8
 
 eureka:
   client:
