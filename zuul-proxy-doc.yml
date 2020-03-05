@@ -31,3 +31,7 @@ zuul:
       serviceId: hello-service  
   host:
     socket-timeout-millis: 30000
+
+base-config:
+  jwtSecret: qyTs9x99vxnxoV4au5c1KMssFztlgZeW4pNRKEoQ8yN0k33eZPcMBqHMLdMODZIeDzvwUmPXWzdIkUaMg4C0GN1M1XJnDSmWNPbtV3zchboHqpRy1XvdsnhRqJL2lgekSutc7GjPghcxc2Ug452iRCww0syq1owQNxcbNOIzKiHJmhVTXQBafriGevgYPoZsqvScjIOZvFFRNgh4ptxhcRQA5SSHUIhJtuZZWInog4fZ1OuCTWIumsBC1FQpw0d
+

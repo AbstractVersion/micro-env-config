@@ -17,7 +17,13 @@ db-connection:
   url: jdbc:mysql://192.168.56.101:3306/sessionDB?useUnicode=true&characterEncoding=utf-8
   driverClass: com.mysql.cj.jdbc.Driver
   basePackage: com.micro.env
-  
+
+feign-ext:
+  retryPeriod: 1000
+  retryMaxPeriod: 8000
+  retryMaxAttempts: 3
+  requestConnectTimeoutMill: 5000
+  readTimeoutMill: 30000
 
 eureka:
   client:
@@ -38,3 +44,7 @@ feign:
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: basic
+
+base-config:
+  jwtSecret: qyTs9x99vxnxoV4au5c1KMssFztlgZeW4pNRKEoQ8yN0k33eZPcMBqHMLdMODZIeDzvwUmPXWzdIkUaMg4C0GN1M1XJnDSmWNPbtV3zchboHqpRy1XvdsnhRqJL2lgekSutc7GjPghcxc2Ug452iRCww0syq1owQNxcbNOIzKiHJmhVTXQBafriGevgYPoZsqvScjIOZvFFRNgh4ptxhcRQA5SSHUIhJtuZZWInog4fZ1OuCTWIumsBC1FQpw0d
+
