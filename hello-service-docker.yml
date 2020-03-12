@@ -1,5 +1,3 @@
-server:
-  port: 8000
 hello-service:
   config01:  Configuration1
   config02:  Configuration2
