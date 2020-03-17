@@ -35,11 +35,11 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://${eureka.credentials.username}:${eureka.credentials.password}discovery-service:8761/eureka/
+      defaultZone: http://abstract:admindiscovery-service:8761/eureka/
     instance:
       preferIpAddress: true  
 
-
+#${eureka.credentials.password}
 management:
   endpoints:
     web:
