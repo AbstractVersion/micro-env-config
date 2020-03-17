@@ -19,3 +19,12 @@ management:
       exposure:
         include: refresh
 
+spring:
+  rabbitmq:
+    host: rabbit-server
+    port: 5672
+    username: abstract
+    password: >-
+      {cipher}AQBpx0l+T9zbvZ2M97tX2xfxjv3lc0ptyRzFkJnxKrGJmj2OQTnAtfRoRCIET23k8cUGVwncJScNLzeMQGvFgjbJ96FlSE19FKJ1/R1R1zyPdUoP/26iiy1U0xT6obxyY5MaqY4i26bu6ac6GitjAl3VCo0CGOgUMSRuVbrVhnuGjhSJSZxfufbWV5kWBhfQGLiLQwf/LxjtzvBPWrCASyhFBRXkEQ8yUIPtoqiWl7jv/f4GNvikDsB0PtcvQ7hF0BZmMx8MvmXZUrY9mpsXMMUEc8yrATwxRGqti5ytd2A3obTiywc1A3LkjlMTmfcC4FnSFRtBpVv4cy+8TEK72jx7lqWVMK5wwMFJDtK3EdvvM2ZDkPz1ZSgLSnckhCPX2oE=
+  
+
