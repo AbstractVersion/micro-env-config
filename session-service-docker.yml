@@ -1,47 +1,43 @@
-
 server:
   port: 8080
   use-forward-headers: true
 spring:
-  banner: 
+  banner:
     charset: utf-8
   info:
     build:
       encoding: utf-8
     git:
       encoding: utf-8
-  messages: 
+  messages:
     encoding: utf-8
-
 db-connection:
-  url: jdbc:mysql://generalRDBMS:3306/sessionDB?useUnicode=true&characterEncoding=utf-8
+  url: >-
+    jdbc:mysql://generalRDBMS:3306/sessionDB?useUnicode=true&characterEncoding=utf-8
   driverClass: com.mysql.cj.jdbc.Driver
   basePackage: com.micro.env
   user: root
-  password: 
+  password: >-
     {cipher}AQAD6D9bLCwJvYaFh9PSivdzvoXoVwy5D9468bFfIIUYICqTw9Av/Mq33jg0zVaRSR13HZX3oiq8ZaFncBEzfWR1KWqPvLVpj4w71NeKxFoPmclU1D+rOlN+8uzxiMvURKUnjrscS/9dtCUSd4vyVIkKbktZyrXoltBjLef7jYF63clkgGmGrBCS8X1TAKPmym5OaSVX85YGESt82C12lGS/9u0WTY1f6KfJ8wWRQ2MTtFg3JVUDEn/vmV8qn2NUIz/x9n4j3VT69ueWvM8V05hv/VJkJrqS6tYk43f1QKVyDUK3Rn4UwzFqLrIsET6v/yQ0UE2N8oujdykPl7Hq8klEl4qMYny2HPoJdCQvX6KAXz1nhS02NKugfSeltZnI+vA=
-
 feign-ext:
   retryPeriod: 1000
   retryMaxPeriod: 8000
   retryMaxAttempts: 3
   requestConnectTimeoutMill: 5000
   readTimeoutMill: 30000
-
 eureka:
   client:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://discovery-service:8761/eureka/
+      defaultZone: 'http://discovery-service:8761/eureka/'
     instance:
       preferIpAddress: true
-      
-management: 
-    endpoints: 
-        web: 
-          exposure:
-            include: refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
 feign:
   client:
     config:
@@ -49,7 +45,7 @@ feign:
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: basic
-
 base-config:
-  jwtSecret: {cipher}AQCdaERUA+sJZTE6brbxrjswsCFu5s+REn3/UJyKdQHhRsuy1AU/POE6DCOGVJKChq2Ib90EzeOfeAEadlCBTgSgP46mgOcrAFZJzA2sAZ8JRW6kO7jhbTG33l2HRO3Nazm22b6UbSMTC+SbDmSocCNwk7ZrIvJbjxFVH9HFWPwgwbLVvO/mUnSKNhx4LzpCnSAz6u4dDMK/h2qhCaoSUHmvTTY2jjigZD5OuermHb2jBUVXKawlWclIblrXDbdWpDpJ0Gqs/tSwBDmxxl4VAjdwNNFw1lJ3egtFitJNrTtUDemmabysU+Ip6DlA4Lv7XdqZmrwU9X+Vl9CyEjkcOggGMQKRJUNPrmKIUzEZ6Umnh2zwTMtqxwIKLrMxxCc75hQ+LFXoUFo39BCuA2eKlYFFf7hL4EUNIimdVuIW6ZA9LUfB0KrH8bCxxTMuNXFF24yBETzmW4aVFMRZcjEiLDiMhN7S5+nkwzVaIerwGn/iHJgWrLlwtJsja07TYhiJZIPkTvr5MYkR2Vazpu/EkY4Egs8ey54WZ8+1iYNAhwhcuRnfW5PALa3VbA8tu7SBLra58RLg0ZHBERaoKSenJ/fS2Ockf7/+e3mSdd2a/MJCOm6ptC4JGVAbGrXvrAC38IrIJA32+wuhFaJ/xN2BL8f8+ZdkFFlQi+46p94cIgAjEz1xC737zUpW+oQIqOmMhvs=
+  jwtSecret: >-
+    {cipher}AQCdaERUA+sJZTE6brbxrjswsCFu5s+REn3/UJyKdQHhRsuy1AU/POE6DCOGVJKChq2Ib90EzeOfeAEadlCBTgSgP46mgOcrAFZJzA2sAZ8JRW6kO7jhbTG33l2HRO3Nazm22b6UbSMTC+SbDmSocCNwk7ZrIvJbjxFVH9HFWPwgwbLVvO/mUnSKNhx4LzpCnSAz6u4dDMK/h2qhCaoSUHmvTTY2jjigZD5OuermHb2jBUVXKawlWclIblrXDbdWpDpJ0Gqs/tSwBDmxxl4VAjdwNNFw1lJ3egtFitJNrTtUDemmabysU+Ip6DlA4Lv7XdqZmrwU9X+Vl9CyEjkcOggGMQKRJUNPrmKIUzEZ6Umnh2zwTMtqxwIKLrMxxCc75hQ+LFXoUFo39BCuA2eKlYFFf7hL4EUNIimdVuIW6ZA9LUfB0KrH8bCxxTMuNXFF24yBETzmW4aVFMRZcjEiLDiMhN7S5+nkwzVaIerwGn/iHJgWrLlwtJsja07TYhiJZIPkTvr5MYkR2Vazpu/EkY4Egs8ey54WZ8+1iYNAhwhcuRnfW5PALa3VbA8tu7SBLra58RLg0ZHBERaoKSenJ/fS2Ockf7/+e3mSdd2a/MJCOm6ptC4JGVAbGrXvrAC38IrIJA32+wuhFaJ/xN2BL8f8+ZdkFFlQi+46p94cIgAjEz1xC737zUpW+oQIqOmMhvs=
 
