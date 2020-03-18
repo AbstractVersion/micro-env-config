@@ -13,6 +13,12 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+        include: bus-env
 spring: 
   rabbitmq:
     host: rabbit-server

@@ -22,11 +22,17 @@ eureka:
     instance:
       preferIpAddress: true  
       
-management: 
-  endpoints: 
-    web: 
+#management: 
+#  endpoints: 
+#    web: 
+#      exposure:
+#        include: refresh
+management:
+  endpoints:
+    web:
       exposure:
-        include: refresh
+        include: bus-refresh
+        include: bus-env
 feign:
   client:
     config:

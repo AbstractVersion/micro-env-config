@@ -13,12 +13,12 @@ eureka:
       defaultZone: http://${eureka.credentials.username}:${eureka.credentials.password}@discovery-service:8761/eureka/
     instance:
       preferIpAddress: true  
-management: 
-  endpoints: 
-    web: 
+management:
+  endpoints:
+    web:
       exposure:
-        include: refresh
-
+        include: bus-refresh
+        include: bus-env
 spring:
   rabbitmq:
     host: rabbit-server
