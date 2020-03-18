@@ -24,6 +24,8 @@ management:
         #include: bus-env
 
 spring:
+  main:
+    banner-mode: "off"
   rabbitmq:
     host: rabbit-server
     port: 5672
