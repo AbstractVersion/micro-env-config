@@ -18,7 +18,7 @@ management:
     web:
       exposure:
         include: bus-refresh
-        include: bus-env
+        #include: bus-env
 spring:
   rabbitmq:
     host: rabbit-server
