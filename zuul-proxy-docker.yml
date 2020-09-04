@@ -39,8 +39,8 @@ feign:
   client:
     config:
       default:
-        connectTimeout: 5000
-        readTimeout: 5000
+        connectTimeout: 900000
+        readTimeout: 900000
         loggerLevel: basic
 
 logging:
@@ -58,7 +58,26 @@ zuul:
     hello-service:
       serviceId: hello-service  
   host:
-    socket-timeout-millis: 30000
+    connect-timeout-millis: 900000
+    max-per-route-connections: 10000
+    max-total-connections: 5000
+    socket-timeout-millis: 900000
+  semaphore: 
+    max-semaphores: 500
+
+ribbon: 
+  ReadTimeout: 900000
+  connection-timeout: 120000
+  eureka: 
+    enabled: true
+
+hystrix: 
+  command: 
+    default: 
+      execution: 
+        isolation: 
+          thread: 
+            timeoutInMilliseconds: 1802000
 
 base-config:
   jwtSecret: >-
