@@ -19,7 +19,6 @@ management:
         include: bus-refresh
 
 spring:
-  profiles: docker
   logging:
     level:
       com.kafka.template.service.LibraryEventsService: 'OFF'
