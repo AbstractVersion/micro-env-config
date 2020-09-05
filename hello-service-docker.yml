@@ -1,6 +1,6 @@
 hello-service:
-  config01:  Configuration5
-  config02:  Configuration6
+  config01:  Configuration3
+  config02:  Configuration4
   config03:  100
 
 eureka:
